@@ -38,6 +38,22 @@ cd lifting_ws_ros2
 colcon build
 ```
 
+## run
+
+```bash
+# source
+source install/setup.bash
+#run node
+ros2 run lifting_ctrl_ros2_pkg server --id 1 #830ABS
+ros2 run lifting_ctrl_ros2_pkg serve_850pro --id 1 #850pro
+#topic echo
+ros2 topic echo /LiftMotorStatePub
+#service call
+ros2 service call /LiftingMotorService lifting_msg_pkg/srv/LiftMotorSrv "{ val: 0, mode: 1 }"
+```
+
+推荐使用`byobu`命令行工具多开终端,一般开三个窗格,一个用来启动代码,一个用来`echo topic`,一个用来`service call`
+
 ## Json
 
 需要根据移动模组的参数来定,需要修改的如下:
@@ -89,18 +105,3 @@ colcon build
    "motorStallCurrent":17,//电机堵转电流限幅,单位A
 }
 ```
-
-## run
-
-```bash
-source install/setup.bash
-#run node
-ros2 run lifting_ctrl_ros2_pkg server --id 1 #830ABS
-ros2 run lifting_ctrl_ros2_pkg serve_850pro --id 1 #850pro
-#topic echo
-ros2 topic echo /LiftMotorStatePub
-#service call
-ros2 service call /LiftingMotorService lifting_msg_pkg/srv/LiftMotorSrv "{ val: 0, mode: 1 }"
-```
-
-推荐使用`byobu`命令行工具多开终端,一般开三个窗格,一个用来启动代码,一个用来`echo topic`,一个用来`service call`
