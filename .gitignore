@@ -4,6 +4,7 @@ install/
 .vscode/
 log/
 src/lifting_ctrl_ros2_pkg/lifting_ctrl_ros2_pkg/scripts
+*.7z
 # Prerequisites
 *.d
 # Compiled Object files
