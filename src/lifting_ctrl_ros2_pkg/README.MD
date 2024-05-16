@@ -13,10 +13,10 @@ lifting_ctrl_service_node_850pro.py 为开启服务控制电机节点`lifting_ct
 
 ```bash
 # 830ABS
-ros2 run lifting_ctrl_ros2_pkg server // 默认id为1
-ros2 run lifting_ctrl_ros2_pkg server --id 1
+ros2 run lifting_ctrl_ros2_pkg service_830abs // 默认id为1
+ros2 run lifting_ctrl_ros2_pkg service_850pro --id 1
 # 850pro
-rosrun lifting_ctrl_ros2_pkg server_850pro --id 1
+rosrun lifting_ctrl_ros2_pkg service_850pro --id 1
 ```
 
 ## topic

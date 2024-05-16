@@ -41,11 +41,10 @@ colcon build
 ## run
 
 ```bash
-# source
 source install/setup.bash
 #run node
-ros2 run lifting_ctrl_ros2_pkg server --id 1 #830ABS
-ros2 run lifting_ctrl_ros2_pkg serve_850pro --id 1 #850pro
+ros2 run lifting_ctrl_ros2_pkg service_830abs --id 1 #830ABS
+ros2 run lifting_ctrl_ros2_pkg service_850pro --id 1 #850pro
 #topic echo
 ros2 topic echo /LiftMotorStatePub
 #service call
