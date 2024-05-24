@@ -6,8 +6,8 @@ Test:
 
 |ROS_DISTRO |STATE|
 |---|---|
-|foxy|Pass|
-|humble|Pass|
+|![foxy](https://img.shields.io/badge/ROS2-foxy-blue.svg)|![Pass](https://img.shields.io/badge/Pass-blue.svg)|
+|![humble](https://img.shields.io/badge/ROS2-humble-blue.svg)|![Pass](https://img.shields.io/badge/Pass-blue.svg)|
 
 有关`rospackage`细节详见:
 
