@@ -19,8 +19,8 @@ Test:
 2. 驱动器有两个网口，走的一个是232协议，一个是485/can协议，
    1. 232那个口是用来插它自带的灰色的网口转232的，然后232一端连接usb转串口线，再插到win系统电脑上，使用win上位机控制
    2. 485用来连接工控机使用ros包控制，接线检查是否正确
-3. 如果重新拆装了电机,建议将json的`initMode`参数设定为0,然后手动执行初始化指令(val: 0, mode: 1),设定这个参数之后启动程序,电机可能会动一下,属正常现象
-   因为假设初始上电位置超过了json中设定的限位范围[downLimitVal,upLimitVal],`initMode`参数设定为0会导致刚上电数值超限,会往反方向转一小下,这个只在`initMode`参数设定为0时出现,
+3. 若重新拆装了电机,建议将json的`initMode`参数设定为0,然后手动执行初始化指令(val: 0, mode: 1),设定这个参数之后启动程序,电机会发生微动,属正常现象
+   因为假设初始上电位置超过了json中设定的限位范围[downLimitVal,upLimitVal],`initMode`参数设定为0会导致刚上电数值超限,会向反方向旋转,这个只在`initMode`参数设定为0时出现,
    如果`initMode`参数设定为1,则会上电初始化,不会出现这个问题
 
 ## pip packages
@@ -65,7 +65,7 @@ ros2 service call /LiftingMotorService lifting_msg_pkg/srv/LiftMotorSrv "{ val: 
 
 1. 确定丝杆导程,如果有减速箱,确定减速比,
 
-   例如:
+   例:
 
    导程=8, 减速比= 5:1
 
