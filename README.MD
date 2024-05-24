@@ -13,6 +13,10 @@ Test:
 
 [lifting_ctrl_ros2_pkg's README](./src/lifting_ctrl_ros2_pkg/README.MD)
 
+有关USB绑定规则详见:
+
+[usb-rules规则编写](./src/usb-rules规则编写.md)
+
 ## 注意事项
 
 1. 驱动器正面会有标签，可以看驱动器型号，目前只支持830ABS、850pro
