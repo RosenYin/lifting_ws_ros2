@@ -9,6 +9,8 @@ Test:
 |![foxy](https://img.shields.io/badge/ROS2-foxy-blue.svg)|![Pass](https://img.shields.io/badge/Pass-blue.svg)|
 |![humble](https://img.shields.io/badge/ROS2-humble-blue.svg)|![Pass](https://img.shields.io/badge/Pass-blue.svg)|
 
+**注意：如果是jetson AGX orin arm64架构，需要将`src/lifting_ctrl_ros2_pkg/lifting_ctrl_ros2_pkg/so`下的`agx_orin_arm64_humble_3.10`文件夹中的文件，放到python3.10文件里，暂时只支持humble*
+
 有关`rospackage`细节详见:
 
 [lifting_ctrl_ros2_pkg's README](./src/lifting_ctrl_ros2_pkg/README.MD)
