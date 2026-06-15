@@ -66,7 +66,7 @@ int64 fps_error      //帧率错误，即电机离线计数值，发送-3的mode
     "baudRate": 38400 ,//串口波特率
     "dataFormat":"hex",//是否16进制转换
     "reductionRatio":20000,//执行器末端执行1mm，电机运行多少脉冲(1圈10000脉冲)，单位脉冲数
-    "posOffset": 0,//位置偏移量(暂时不用)，，单位脉冲
+    "posOffset": 0,//位置偏移量(暂时不用)，单位脉冲
     "responseTimeout":70,//应答超时时间，单位s
     "motorSpd":800,//电机最大速度设定，单位rpm
     "motorTime":0,//电机加减速时间(梯形曲线)，单位 1 为 65ms，假设设定为10,则加减速时间为650ms

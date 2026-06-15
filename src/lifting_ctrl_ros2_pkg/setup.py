@@ -7,7 +7,6 @@ package_name = 'lifting_ctrl_ros2_pkg'
 config_files = glob.glob(package_name + '/config/*.json')
 
 python_version = f'{sys.version_info.major}.{sys.version_info.minor}'
-so_files = glob.glob(f'{package_name}/so/python{python_version}/*.so')
 
 setup(
     name=package_name,
@@ -18,7 +17,6 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         (f'lib/python{python_version}/site-packages/' + package_name + '/config', config_files),
-        (f'lib/python{python_version}/site-packages/' + package_name , so_files),
     ],
     install_requires=['setuptools'],
     zip_safe=True,

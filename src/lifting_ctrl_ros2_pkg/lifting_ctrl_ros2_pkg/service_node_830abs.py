@@ -5,9 +5,9 @@ from rclpy.node import Node
 import argparse
 import sys
 
-from .lifting_motor_ctrl import C_LiftingMotorCtrl
+from .scripts.lifting_motor_ctrl import C_LiftingMotorCtrl
 
-from .lifting_ctrl_service_node import C_ROS_Server
+from .scripts.lifting_ctrl_service_node import C_ROS_Server
 
 from lifting_msg_pkg.msg import LiftMotorMsg
 

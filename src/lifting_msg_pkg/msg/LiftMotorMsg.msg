@@ -24,6 +24,9 @@ int64 target_height
 int64 target_pos
 bool up_limit
 bool down_limit
+int64 up_limit_height
+int64 down_limit_height
 
 bool reach_target_pos
+bool stop_flag
 int64 fps_error
