@@ -255,17 +255,18 @@ class C_LiftingMotorCtrl():
         print(workable_port_list)
         print("即将寻找设备 ",self.__motor_id)
         is_cur_port = False
+        filter_name = '/dev/tty'
         if(len(workable_port_list)!=0):
             for l in workable_port_list :
-                if(l[:11] == '/dev/ttyUSB' and l!=ignore_port):
+                if(l[:len(filter_name)] == filter_name and l!=ignore_port):
                     print("--------", self.__motor_id,"---",l)
                     if(self.__deal_data.sensor_serial.is_serial_port_available(l)):
                         for i in range(10):
                             time.sleep(0.2)
                             txlist = [self.__motor_id, 0x03, 0x00, 0xE0, 0x00, 0x0A]
-                            rxdata = self.__deal_data.DealAllData(txlist, 6, True, l, 25)
+                            rxdata = self.__deal_data.DealAllData(txlist, 6, True, l)
                             print("----", self.__motor_id,"--",rxdata)
-                            if(rxdata is not None and len(rxdata)==20):
+                            if(rxdata is not None and len(rxdata)==txlist[5]*2):
                                 is_cur_port = True
                             if(is_cur_port == True):
                                 # print(rxdata)
