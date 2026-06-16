@@ -345,7 +345,7 @@ class C_ROS_Server(Node):
         self.get_logger().info(f"resquest的mode为{self.mode}")
         self.get_logger().info(f"resquest的val为{request.val}")
         self.get_logger().info(f"服务端的应答为{resp}")
-        response.resp = resp
+        response.state = resp
         return response
 
     def SververCallbackBlock(self, req, resp):
